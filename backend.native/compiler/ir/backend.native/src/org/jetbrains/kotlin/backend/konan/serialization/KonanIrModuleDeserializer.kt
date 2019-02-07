@@ -332,6 +332,10 @@ class KonanIrModuleDeserializer(
             }
         }
 
+        // TODO: Do it only for final binary.
+        if (!deserializeAllDeclarations)
+            fileProto.explicitlyExportedToCompilerList.forEach { deserializeIrSymbol(it) }
+
         return file
     }
 

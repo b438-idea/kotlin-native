@@ -89,6 +89,7 @@ message IrFile {
     repeated UniqId declaration_id = 1;
     required FileEntry file_entry = 2;
     required String fq_name = 3;
+    repeated IrSymbol explicitlyExportedToCompiler = 4;
 }
 
 message IrModule {
